@@ -5,7 +5,8 @@
 int main() {
     int m = 5, n = 10;
     int a[m][n], sum[m];
-    srand(time(NULL));
+    //srand(time(NULL)); //???
+    srand(0x3349876);
 
     for (int i = 0; i < m; i++) {
         sum[i] = 0;
