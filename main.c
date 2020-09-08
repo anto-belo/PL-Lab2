@@ -5,8 +5,7 @@
 int main() {
     int m = 5, n = 10;
     int a[m][n], sum[m];
-    //srand(time(NULL)); //???
-    srand(0x3349876);
+    srand(time(NULL));
 
     for (int i = 0; i < m; i++) {
         sum[i] = 0;
@@ -35,9 +34,9 @@ int main() {
             val_arr[z] = a[i][z];
         while (k > 0 && value < sum[k - 1]) {
             sum[k] = sum[k - 1];
-            k--;
             for (int z = 0; z < n; z++)
                 a[k][z] = a[k - 1][z];
+            k--;
         }
         sum[k] = value;
         for (int z = 0; z < n; z++)
